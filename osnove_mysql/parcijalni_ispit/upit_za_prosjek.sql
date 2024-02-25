@@ -9,6 +9,7 @@ GROUP BY emp_no
 ;
 
 
+
 -- trebam broj 190
 SET @var1 = "sdsd";
 SELECT @var1;
