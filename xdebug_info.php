@@ -1,2 +1,2 @@
 <?php
-xdebug_info($category = '');
+xdebug_info();

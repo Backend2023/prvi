@@ -1,0 +1,21 @@
+{
+    "name": "mrv/objekti",
+    "description": "Primjer 1 objektni",
+    "type": "project",
+    "require": {
+        "nesbot/carbon": "3.x-dev",
+        "ticketpark/htmlphpexcel": "^0.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mrv\\Objekti\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mrvic",
+            "email": "mrvic.predrag@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
