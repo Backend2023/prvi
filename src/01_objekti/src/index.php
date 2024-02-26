@@ -17,11 +17,13 @@ echo $c->dayName;
 echo $c->addDays(30);
 
 
+use Some\Namespace\Functions;
 
-//use \Some\Namespace\Functions;
 //use Some\Namespace\Functions\Functions as myFunctions;
 
-$fun = New Functions();
+//Error: Class "Some\Namespace\Functions" not found in C:\xampp\htdocs\prva\src\01_objekti\src\index.php on line 24
+//$fun = New Funcn\Functions;
+$fun= new Functions;
  $fun->a();
  $fun->b();
 

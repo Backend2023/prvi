@@ -27,6 +27,7 @@ class ComposerStaticInit3ed68bd78880a6701bd6481d82d8097f
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Clock\\' => 24,
+            'Some\\Namespace\\' => 15,
         ),
         'P' => 
         array (
@@ -84,6 +85,10 @@ class ComposerStaticInit3ed68bd78880a6701bd6481d82d8097f
         'Symfony\\Component\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/clock',
+        ),
+        'Some\\Namespace\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Some/Namespace',
         ),
         'Psr\\Clock\\' => 
         array (
