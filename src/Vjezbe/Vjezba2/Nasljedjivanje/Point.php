@@ -1,20 +1,28 @@
 <?php
 
 class Point{
- private int $x;
- private int $y;   
- function __construct(?int $x=0, ?int $y=0)
+ private float $x;
+ private float $y;   
+ function __construct(?float $x=0, ?float $y=0) // konstruktor
  {
     $this->x=$x;
     $this->y=$y;
  }
- public function __toString()
+ public function getX():float{  // getter
+    return $this->x;
+ }
+ public function getY():float{
+    return $this->y;
+ }
+ public function __toString()  // magic metoda __toString()
  {
-     return "[".$this->x.",".$this->y."]";
+     return "[".round($this->x,2).",".round($this->y,2)."]";
  }
 }
-
+/*
 $p1= new Point();
-echo $p1;
-$p2= new Point(y:9);  // predavanje parametara drugim slijedom
-echo $p2;
+echo $p1.PHP_EOL;
+$p2= new Point(y:7);  // predavanje parametara drugim slijedom
+echo $p2.PHP_EOL;
+
+*/
