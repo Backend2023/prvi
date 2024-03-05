@@ -8,6 +8,8 @@ class Line
     private Point $p2;
     public function __construct(?Point $param0, mixed $param1, mixed $param2)
     {
+        $this->p1 = new Point(0, 0);
+        $this->p2 = new Point(0, 0);
         //echo get_class($param1);
 
         if ($param1 != null && gettype($param1) == "object") {
@@ -31,7 +33,8 @@ class Line
                 $param1 * cos(deg2rad($param2)),
                 $param1 * sin(deg2rad($param2))
             ); // x = L=cos(alfa), y = L=sin(alfa)
-        } else if ($param0 != null && gettype($param1) == "integer" && gettype($param2) == "integer") {
+        } else if ($param0 != null && (gettype($param1) == "integer" && gettype($param2) == "integer")
+        ||gettype($param1) == "double" && gettype($param2) == "double") {
 
             $this->p1 = $param0;
             $this->p2 = new Point(
@@ -40,7 +43,13 @@ class Line
             ); // x = L=cos(alfa), y = L=sin(alfa)
         }
     }
- public function duljina(){
+    public function getP1():Point{
+        return $this->p1;
+    }
+    public function getP2():Point{
+        return $this->p2;
+    }
+ public function duljina():float{
    // $kateta_x = $this->p2->getX() - $this->p1->getX(); // razlika x od koordinata p1 i p2
    $kateta_x =$this->kateta_x();
     $kateta_y = $this->p2->getY() - $this->p1->getY(); // razlika y od koordinata p1 i p2
@@ -51,7 +60,8 @@ class Line
     $kateta_x = $this->p2->getX() - $this->p1->getX(); // razlika x od koordinata p1 i p2
     $kateta_y = $this->p2->getY() - $this->p1->getY(); // razlika y od koordinata p1 i p2
 
-    return ($kateta_x==0)?null:rad2deg(atan( $kateta_y / $kateta_x));
+   // return ($kateta_x==0)?null:rad2deg(atan( $kateta_y / $kateta_x));
+   return ($kateta_x==0) ? 90 :rad2deg(atan( $kateta_y / $kateta_x));
  }
  public function kateta_x(){
     return $this->p2->getX() - $this->p1->getX();
