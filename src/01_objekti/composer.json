@@ -9,7 +9,8 @@
     "autoload": {
         "psr-4": {
             "Mrv\\Objekti\\": "src/",
-            "Some\\Namespace\\": "src/Some/Namespace"
+            "Some\\Namespace\\": "src/Some/Namespace",
+            "Math\\": "src/primjeri/primjer4/Math/"
         }
     },
     "authors": [

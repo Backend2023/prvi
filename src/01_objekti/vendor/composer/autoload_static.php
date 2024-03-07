@@ -37,6 +37,7 @@ class ComposerStaticInit3ed68bd78880a6701bd6481d82d8097f
         'M' => 
         array (
             'Mrv\\Objekti\\' => 12,
+            'Math\\' => 5,
         ),
         'D' => 
         array (
@@ -101,6 +102,10 @@ class ComposerStaticInit3ed68bd78880a6701bd6481d82d8097f
         'Mrv\\Objekti\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Math\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/primjeri/primjer4/Math',
         ),
         'Doctrine\\Persistence\\' => 
         array (

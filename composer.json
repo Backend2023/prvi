@@ -3,7 +3,8 @@
     "description": "prvi projekt sa composerom",
     "autoload": {
         "psr-4": {
-            "pmrvic\\prvi\\": "src/"
+            "pmrvic\\prvi\\": "src/",
+            "Math\\": "src/primjeri/primjer4/Math/"
         }
     },
     "authors": [

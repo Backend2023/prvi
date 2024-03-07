@@ -1,5 +1,8 @@
 <?php
 namespace Math\Geometry;
+require_once '../../../../../vendor/autoload.php';
+
+
 
 class Circle 
 {	
@@ -19,6 +22,7 @@ class Circle
     {
 		// (pi)(r^2)
 		return \Math\Constants::PI * $this->radius ** 2; 
+    
     }
     
     public function getCircumference() 
@@ -26,4 +30,17 @@ class Circle
 		// 2(pi)(r)
 		return 2 * \Math\Constants::PI * $this->radius;
 	}
+  public function __toString()
+  {
+    return "kružnica, radijus:".$this->radius.PHP_EOL
+    ." promjer:".$this->getDiameter().PHP_EOL
+    ." povrsina:".$this->getArea().PHP_EOL
+    ." opseg:".$this->getCircumference().PHP_EOL;
+  }
 }
+
+$cir=new Circle(10);
+echo $cir;
+
+$c2= new \Math\Geometry\Circle(5);
+echo $c2;

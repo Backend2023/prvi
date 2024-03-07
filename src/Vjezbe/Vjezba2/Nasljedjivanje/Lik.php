@@ -10,12 +10,10 @@ include_once "Line.php";
 abstract class Lik
 {  // apstraktna klasa se ne moze instancirati u objekt
 
-    public function povrsina()
-    {
-    }
-    public function opseg()
-    {
-    }
+    abstract public function povrsina();
+
+    abstract public function opseg();
+
     public function getMyName(){
         // return get_object_vars($this);  // ovo vraća array()
         $opis="Klasa ".get_class($this).PHP_EOL;
@@ -192,5 +190,7 @@ class Mnogokut extends Lik
     {
 // $this->alpha= 180*($this->N-2)/$this->N
     }
-
+    public function opseg(){}  // ako postoje abstract metode mora ih se pregaziti (override)
+    
+   public function povrsina(){}
 }
