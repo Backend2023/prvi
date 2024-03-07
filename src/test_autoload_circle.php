@@ -10,3 +10,7 @@ include "../vendor/autoload.php";
 
 $c3= new \MyCircle\Circle(new \MyCircle\Point(5,7),5);
 echo $c3;
+
+use \MyCircle\Circle as cir;  // alias 
+$c4= new cir(new \MyCircle\Point(5,7),5);
+echo $c4;
