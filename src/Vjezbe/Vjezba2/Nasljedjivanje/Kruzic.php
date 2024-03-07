@@ -1,6 +1,6 @@
 <?php
 // custom autoloader s namespacima?
-//namespace Nasljedjivanje;
+namespace Nasljedjivanje;
 
 class Kruzic
 {
