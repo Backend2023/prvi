@@ -1,6 +1,6 @@
 <?php
 namespace Math\Geometry;
-require_once '../../../../../vendor/autoload.php';
+// require_once '../../../../../vendor/autoload.php';
 
 
 
@@ -38,9 +38,10 @@ class Circle
     ." opseg:".$this->getCircumference().PHP_EOL;
   }
 }
-
+/*
 $cir=new Circle(10);
 echo $cir;
 
 $c2= new \Math\Geometry\Circle(5);
 echo $c2;
+*/

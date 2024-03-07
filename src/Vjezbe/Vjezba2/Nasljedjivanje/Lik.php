@@ -1,4 +1,6 @@
 <?php
+namespace MyCircle;
+
 //include_once "Point.php";
 include_once "Line.php";
 /**
@@ -34,44 +36,8 @@ abstract class Lik
         return $opis;
     }
 }
-define('PI', 3.14);
-/**
- * 
- * @param  Point $p središte kruga
- * @param float $r polumjer kruga
- *
- */
-class Krug extends Lik implements ILik
-{
-    public $txt="bilo što";
-    private Point $p; //iskodište
-    private float $r; // polumjer
-    public function __construct(Point $p, float $r)
-    {
-        $this->r = $r;
-        $this->p = $p;
-    }
-    public function povrsina()
-    {
-        return $this->r ** 2 * PI;
-    }
-    public function opseg()
-    {
-        return 2 * $this->r * PI;
-    }
 
-    public function getBrojKuteva() {
-        return 0;
-    }
 
-    public function setBrojKuteva($broj) {
-        // krug nema kuteve...
-    }
-}
-class Circle extends Krug
-{
-
-}
 class Pravokutnik extends Lik implements ILik
 {
     protected Point $p1; // donja lijeva tocka
@@ -164,17 +130,26 @@ class Kvadrat extends Pravokutnik {
 
 //$lik1=new Lik();  // OVO NEMA SMISLA
 
+//TODO
+/*
+PHP Fatal error:  Uncaught Error: Class "MyCircle\Krug" not found in C:\xampp\htdocs\prva\src\Vjezbe\Vjezba2\Nasljedjivanje\Lik.php:134
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\prva\src\Vjezbe\Vjezba2\Nasljedjivanje\Lik.php on line 134
+*
 
-$krug1 = new Krug(new Point(3, 4), 2);  // definicija kruga: ishodiste, radijus 
+/*
+$krug1 = new \MyCircle\Krug(new Point(3, 4), 2);  // definicija kruga: ishodiste, radijus 
 echo $krug1->opseg() . PHP_EOL;
 echo $krug1->povrsina() . PHP_EOL;
 echo $krug1->getMyName();
+
 
 $krug2 = new Circle(new Point(3, 4), 2);  // definicija kruga: ishodiste, radijus 
 echo $krug2->opseg() . PHP_EOL;
 echo $krug2->povrsina() . PHP_EOL;
 echo $krug2->getMyName();
-
+*/
 $pravokutnik = new Pravokutnik(new Point(0, 0), new Point(3, 4)); // dvije točke dijagonale, ili jedna linija 
 echo $pravokutnik . PHP_EOL;
 echo $pravokutnik->getMyName();

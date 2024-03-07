@@ -4,7 +4,8 @@
     "autoload": {
         "psr-4": {
             "pmrvic\\prvi\\": "src/",
-            "Math\\": "src/primjeri/primjer4/Math/"
+            "Math\\": "src/primjeri/primjer4/Math/",
+            "MyCircle\\":"src/Vjezbe/Vjezba2/Nasljedjivanje/"
         }
     },
     "authors": [

@@ -1,5 +1,5 @@
 <?php
-
+namespace MyCircle;
 class Point{
  private float $x;
  private float $y;   

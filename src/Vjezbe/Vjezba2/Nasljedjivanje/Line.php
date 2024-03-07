@@ -1,4 +1,5 @@
 <?php
+namespace MyCircle;
 include "Point.php";
 
 class Line

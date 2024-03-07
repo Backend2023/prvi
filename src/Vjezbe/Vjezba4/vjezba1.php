@@ -40,5 +40,6 @@ echo $cir;
 $c2= new \Math\Geometry\Circle(5);
 echo $c2;
 
-$c3= new \MyCircle\Circle(5);
+$c3= new \MyCircle\Circle(new \MyCircle\Point(5,7),5);
 echo $c3;
+
