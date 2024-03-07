@@ -39,3 +39,6 @@ echo $cir;
 
 $c2= new \Math\Geometry\Circle(5);
 echo $c2;
+
+$c3= new \MyCircle\Circle(5);
+echo $c3;

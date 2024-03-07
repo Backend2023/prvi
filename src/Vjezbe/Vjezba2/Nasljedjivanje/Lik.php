@@ -7,6 +7,15 @@ include_once "Line.php";
  * [1] Geometrijski lik u svom opisu ne sadrži sljedeće informacije:
  *  položaj, veličinu, orijentaciju i refleksiju.[2]
  */
+
+ // IFACE JE UGOVOR !!!
+ //InterfaceName nazivam ILik
+interface ILik {
+  public function getBrojKuteva();
+  public function setBrojKuteva($broj);
+}
+
+// Obično nazivamo ALik
 abstract class Lik
 {  // apstraktna klasa se ne moze instancirati u objekt
 
@@ -32,7 +41,7 @@ define('PI', 3.14);
  * @param float $r polumjer kruga
  *
  */
-class Krug extends Lik
+class Krug extends Lik implements ILik
 {
     public $txt="bilo što";
     private Point $p; //iskodište
@@ -50,9 +59,20 @@ class Krug extends Lik
     {
         return 2 * $this->r * PI;
     }
-}
 
-class Pravokutnik extends Lik
+    public function getBrojKuteva() {
+        return 0;
+    }
+
+    public function setBrojKuteva($broj) {
+        // krug nema kuteve...
+    }
+}
+class Circle extends Krug
+{
+
+}
+class Pravokutnik extends Lik implements ILik
 {
     protected Point $p1; // donja lijeva tocka
     protected Point $p3; // gornja desna točka
@@ -67,6 +87,13 @@ class Pravokutnik extends Lik
         $this->diagonala = new Line(null, $p1, $p3);
         $this->p2=new Point($p3->getX(), $p1->getY()); 
         $this->p4=new Point($p1->getX(), $p3->getY()); 
+    }
+    public function getBrojKuteva() {
+        return 4;
+    }
+
+    public function setBrojKuteva($broj) {
+        // ovo nije poligon, mnogokut pa je uvijek 4 kuta
     }
     public function povrsina()
     {
@@ -142,6 +169,11 @@ $krug1 = new Krug(new Point(3, 4), 2);  // definicija kruga: ishodiste, radijus
 echo $krug1->opseg() . PHP_EOL;
 echo $krug1->povrsina() . PHP_EOL;
 echo $krug1->getMyName();
+
+$krug2 = new Circle(new Point(3, 4), 2);  // definicija kruga: ishodiste, radijus 
+echo $krug2->opseg() . PHP_EOL;
+echo $krug2->povrsina() . PHP_EOL;
+echo $krug2->getMyName();
 
 $pravokutnik = new Pravokutnik(new Point(0, 0), new Point(3, 4)); // dvije točke dijagonale, ili jedna linija 
 echo $pravokutnik . PHP_EOL;

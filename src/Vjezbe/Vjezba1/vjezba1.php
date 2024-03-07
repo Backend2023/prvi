@@ -17,7 +17,7 @@ class User
     }
     public function setName(string $ime):void  // mutator
     {
-         $this->name= ucfirst($ime) ;
+         $this->name= ucfirst(strtolower($ime)) ;
     } 
     // method that return $name
     public function getName():string  // Accesssor (getteri / setteri)
