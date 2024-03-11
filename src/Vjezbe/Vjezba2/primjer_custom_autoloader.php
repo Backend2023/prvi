@@ -16,7 +16,3 @@ function my_autoloader($class) {
 
  spl_autoload_register('my_autoloader');
 
- $c2= new \Nasljedjivanje\Kruzic();
- $c3= new Nasljedjivanje\Kruzic();
- echo $c2;
- echo $c3;

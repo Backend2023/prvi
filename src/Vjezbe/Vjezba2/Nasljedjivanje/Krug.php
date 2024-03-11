@@ -1,5 +1,7 @@
 <?php
+
 namespace MyCircle;
+
 define('PI', 3.14);
 
 
@@ -11,7 +13,7 @@ define('PI', 3.14);
  */
 class Krug extends Lik implements ILik
 {
-    public $txt="bilo što";
+    public $txt = "bilo što";
     private Point $p; //iskodište
     private float $r; // polumjer
     public function __construct(Point $p, float $r)
@@ -28,11 +30,36 @@ class Krug extends Lik implements ILik
         return 2 * $this->r * PI;
     }
 
-    public function getBrojKuteva() {
+    public function getBrojKuteva()
+    {
         return 0;
     }
 
-    public function setBrojKuteva($broj) {
+    public function setBrojKuteva($broj)
+    {
         // krug nema kuteve...
+    }
+    public static function vratiRandomKrug()
+    {
+
+        return new Krug(new Point(3, 4), 5.4);
+    }
+    public static function vratiRandomKrug2()
+    {
+        return new static(new Point(3, 4), 5.4);
+    }
+    public static function vratiRandomKrug3()
+    {
+        return self::vratiRandomKrug2();
+    }
+    public function getMyName(){
+       
+        $opis="Klasa Krug >>> ".get_class($this).PHP_EOL;
+        return $opis;
+    }
+    public function getMyParentName(){
+   
+    
+        return PHP_EOL.">>>>  ------>>>  ".parent::getMyName().parent::getnazivlika();
     }
 }

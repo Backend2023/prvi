@@ -20,14 +20,18 @@ interface ILik {
 // Obično nazivamo ALik
 abstract class Lik
 {  // apstraktna klasa se ne moze instancirati u objekt
+    public $nazivlika="genericki lik";
 
+    public function getnazivlika(){
+        return $this->nazivlika;
+    }
     abstract public function povrsina();
 
     abstract public function opseg();
 
     public function getMyName(){
         // return get_object_vars($this);  // ovo vraća array()
-        $opis="Klasa ".get_class($this).PHP_EOL;
+        $opis="Klasa  Lik >>> ".get_class($this).PHP_EOL;
         // foreach (get_object_vars($this) as $key => $value) {
         //     $opis.=$key." = ".$value.PHP_EOL;
         // }
