@@ -20,7 +20,7 @@ class Singleton {
     // The constructor is private
     // to prevent initiation with outer code.
     public function __construct()
-   // private function __construct()
+   // private function __construct()   // Obrisati ovaj red i ostaviti samo PRIVATE
     {
       // The expensive process (e.g.,db connection) goes here.
     }
