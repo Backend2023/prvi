@@ -1,0 +1,1 @@
+PS C:\xampp\htdocs\prva\DesignPatternsPHP\Creational\Singleton\Tests> php C:\xampp\htdocs\prva\DesignPatternsPHP\vendor\phpunit\phpunit\phpunit .

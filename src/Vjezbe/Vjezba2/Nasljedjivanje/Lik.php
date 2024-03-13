@@ -132,6 +132,30 @@ class Kvadrat extends Pravokutnik {
     }
 }
 
+class LikFactory{
+    public static function createLik($oblik):Pravokutnik | null
+    {
+        if ($oblik=="kvadrat"){
+             return new Kvadrat(new Point(0, 0), new Point(4, 0));
+        }
+       
+    else if ($oblik=="pravokutnik"){
+        return new Pravokutnik(new Point(0, 0), new Point(3, 4));
+    }
+    else{
+return null;
+    }
+    }
+
+}
+
+$kvadratLikFromFactory=LikFactory::createLik("kvadrat");
+echo "TVORNICKI >>>>".$kvadratLikFromFactory . PHP_EOL;
+echo $kvadratLikFromFactory->getMyName();
+
+$pravokutnikLikFromFactory=LikFactory::createLik("pravokutnik");
+echo "TVORNICKI >>>>".$pravokutnikLikFromFactory . PHP_EOL;
+echo $pravokutnikLikFromFactory->getMyName();
 
 //$lik1=new Lik();  // OVO NEMA SMISLA
 

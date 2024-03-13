@@ -5,7 +5,9 @@
         "psr-4": {
             "pmrvic\\prvi\\": "src/",
             "Math\\": "src/primjeri/primjer4/Math/",
-            "MyCircle\\":"src/Vjezbe/Vjezba2/Nasljedjivanje/"
+            "MyCircle\\":"src/Vjezbe/Vjezba2/Nasljedjivanje/",
+            "MyCircle\\":"src/Vjezbe/Vjezba2/Nasljedjivanje/",
+            "DesignPatterns\\":"DesignPatternsPHP/"
         }
     },
     "authors": [
