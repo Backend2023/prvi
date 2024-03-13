@@ -1,5 +1,6 @@
 <?php
 namespace MyCircle;
+use Stringable;
 
 //include_once "Point.php";
 include_once "Line.php";
@@ -42,7 +43,7 @@ abstract class Lik
 }
 
 
-class Pravokutnik extends Lik implements ILik
+class Pravokutnik extends Lik implements ILik,Stringable
 {
     protected Point $p1; // donja lijeva tocka
     protected Point $p3; // gornja desna točka
