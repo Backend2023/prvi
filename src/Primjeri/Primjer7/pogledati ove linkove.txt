@@ -1,0 +1,2 @@
+https://refactoring.guru/design-patterns/php
+https://github.com/DesignPatternsPHP/DesignPatternsPHP/
