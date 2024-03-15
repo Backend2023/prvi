@@ -15,7 +15,10 @@ foreach ($p1->getPolica() as $k) {  // ovo nije dobar princip,
     //  echo $k->getAuthorAndTitle();
       //var_dump($k);
 }
-
+foreach ($p1 as $k) {  // ovo nije dobar princip, 
+        echo $k->getAuthorAndTitle();
+        //var_dump($k);
+  }
 //var_dump($p1);
 echo "test";
 // kreiraj factory s knigama
