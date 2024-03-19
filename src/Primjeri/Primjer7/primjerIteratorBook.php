@@ -8,6 +8,7 @@ use DesignPatterns\Behavioral\Iterator\Book;
 use DesignPatterns\Behavioral\Iterator\BookList;
 use DesignPatterns\Behavioral\Iterator\PolicaSKnjigama;
 use \DesignPatterns\Behavioral\Iterator\BookFactory;
+use DesignPatterns\Behavioral\Iterator\Hitovi;
 
 $p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(17));
 //var_dump($p1);
@@ -38,3 +39,7 @@ $books = [];
 foreach ($bookList as $book) {
       echo $book->getAuthorAndTitle();
 }
+
+/* $hits=new Hitovi($p1->getPolica());
+echo $hits->polica->getpr; */
+
