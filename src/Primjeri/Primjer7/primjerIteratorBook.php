@@ -12,7 +12,7 @@ use DesignPatterns\Behavioral\Iterator\Hitovi;
 
 use Random\Randomizer;
 
-$p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(17));
+$p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(3));
 //var_dump($p1);
 foreach ($p1->getPolica() as $k) {  // ovo nije dobar princip, 
     //  echo $k->getAuthorAndTitle();
@@ -36,10 +36,12 @@ $bookList->addBook(new Book('Learning PHP Design Patterns', 'William Sanders'));
 $bookList->addBook(new Book('Professional Php Design Patterns', 'Aaron Saray'));
 $bookList->addBook(new Book('Clean Code', 'Robert C. Martin'));
 
-$books = [];
+
 
 $r = new Randomizer();  // @since 8.2
 //  \Random\Randomizer::getFloat(0.01,99.9) // @since 8.3
+
+echo PHP_EOL.PHP_EOL."normal order >>>>>".PHP_EOL;
 foreach ($bookList as $book) {
       $book->setPrice($r->getInt(0, 1000)/10);
       echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
@@ -48,19 +50,27 @@ foreach ($bookList as $book) {
 // sortiraj mi knjige po cijeni
 //$bookList=sort($bookList); //TODO ubaci ITERABLE
 
-/*
-function cmp(Book $a,Book  $b) {
-      return strcmp($a->getPrice(), $b->getPrice());
-  }
-  
-  usort($bookList->getBooks(), "cmp");
-*/
+echo PHP_EOL.PHP_EOL."sortByPrice() order >>>>>";
+$bookList->sortByPrice();
 
+foreach ($bookList as $book) {
+      echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
+}
+
+
+
+echo PHP_EOL.PHP_EOL."sortByTitle() order >>>>>".PHP_EOL;
+$bookList->sortByTitle();
 
 foreach ($bookList as $book) {
     //  $book->setPrice($r->getInt(0, 1000)/10);
       echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
 }
-/* $hits=new Hitovi($p1->getPolica());
-echo $hits->polica->getpr; */
 
+
+echo PHP_EOL.PHP_EOL."sortByPrice2() order >>>>>";
+$bookList->sortByPrice2();
+
+foreach ($bookList as $book) {
+      echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
+}

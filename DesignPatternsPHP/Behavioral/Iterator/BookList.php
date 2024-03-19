@@ -64,4 +64,32 @@ class BookList implements Countable, Iterator
     {
         return isset($this->books[$this->currentIndex]);
     }
+
+    // mozemo koristiti spaceship operator
+    /*
+    <=>	Spaceship	
+    Returns an integer less than, equal to, or greater than zero, 
+    depending on if $x is less than, equal to, or greater than $y. 
+    Introduced in PHP 7.
+    */
+    public function sortByPrice(): void
+    {
+        usort($this->books, function (Book $book1, Book $book2) {
+            return $book1->getPrice() <=> $book2->getPrice();
+        });
+    }
+    public function sortByPrice2(): void
+    {
+        usort($this->books, function (Book $book1, Book $book2) {
+            return $book1->compareTo($book2);
+        });
+    }
+
+    //sortiramo po naslovu
+    public function sortByTitle(): void
+    {
+        usort($this->books, function (Book $book1, Book $book2) {
+            return strcmp($book1->getTitle(), $book2->getTitle());
+        });
+    }
 }
