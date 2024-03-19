@@ -9,14 +9,14 @@ use DesignPatterns\Behavioral\Iterator\BookList;
 use DesignPatterns\Behavioral\Iterator\PolicaSKnjigama;
 use \DesignPatterns\Behavioral\Iterator\BookFactory;
 
-$p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(77));
+$p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(17));
 //var_dump($p1);
 foreach ($p1->getPolica() as $k) {  // ovo nije dobar princip, 
     //  echo $k->getAuthorAndTitle();
       //var_dump($k);
 }
 foreach ($p1 as $k) {  // ovo nije dobar princip, 
-        echo $k->getAuthorAndTitle();
+        echo $k->getAuthorAndTitle().PHP_EOL;
         //var_dump($k);
   }
 //var_dump($p1);
