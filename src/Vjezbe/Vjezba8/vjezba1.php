@@ -91,9 +91,9 @@ class WordsCollection implements \IteratorAggregate
  * program.
  */
 $collection = new WordsCollection;
-$collection->addItem("First");
-$collection->addItem("Second");
-$collection->addItem("Third");
+$collection->addItem("Firsnd");
+$collection->addItem("Thit");
+$collection->addItem("Secord");
 
 echo "Straight traversal:\n";
 foreach ($collection->getIterator() as $item) {
