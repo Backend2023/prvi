@@ -10,6 +10,8 @@ use DesignPatterns\Behavioral\Iterator\PolicaSKnjigama;
 use \DesignPatterns\Behavioral\Iterator\BookFactory;
 use DesignPatterns\Behavioral\Iterator\Hitovi;
 
+use Random\Randomizer;
+
 $p1 = new PolicaSKnjigama(BookFactory::napraviHrpuKnjiga(17));
 //var_dump($p1);
 foreach ($p1->getPolica() as $k) {  // ovo nije dobar princip, 
@@ -36,10 +38,29 @@ $bookList->addBook(new Book('Clean Code', 'Robert C. Martin'));
 
 $books = [];
 
+$r = new Randomizer();  // @since 8.2
+//  \Random\Randomizer::getFloat(0.01,99.9) // @since 8.3
 foreach ($bookList as $book) {
-      echo $book->getAuthorAndTitle();
+      $book->setPrice($r->getInt(0, 1000)/10);
+      echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
 }
 
+// sortiraj mi knjige po cijeni
+//$bookList=sort($bookList); //TODO ubaci ITERABLE
+
+/*
+function cmp(Book $a,Book  $b) {
+      return strcmp($a->getPrice(), $b->getPrice());
+  }
+  
+  usort($bookList->getBooks(), "cmp");
+*/
+
+
+foreach ($bookList as $book) {
+    //  $book->setPrice($r->getInt(0, 1000)/10);
+      echo PHP_EOL.$book->getAuthorAndTitle()." cijena:".$book->getPrice();
+}
 /* $hits=new Hitovi($p1->getPolica());
 echo $hits->polica->getpr; */
 
