@@ -1,8 +1,13 @@
 <?php
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDBPDO";
+//$username = "username";
+$username = "root";
+//$password = "password";
+$password = "";
+//$dbname = "myDBPDO";
+$dbname = "classicmodels";
+
+//TODO PDO objasniti i prilagoditi skripte 
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
