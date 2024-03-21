@@ -20,7 +20,7 @@ class PolicaSKnjigama implements Countable, Iterator{
     public function getPolica(): array {
         return $this->polica;
     }
-    public function count(): int {
+    public function count(): int {  // implements Countable
         return count($this->polica);
     }
 

@@ -75,9 +75,10 @@ class BookList implements Countable, Iterator
     public function sortByPrice(): void
     {
         usort($this->books, function (Book $book1, Book $book2) {
-            return $book1->getPrice() <=> $book2->getPrice();
+            return $book1->getPrice() <=> $book2->getPrice();  //  <=> --> 1 za veće; 0 za jednako; -1 za manje
         });
     }
+
     public function sortByPrice2(): void
     {
         usort($this->books, function (Book $book1, Book $book2) {
