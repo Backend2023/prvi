@@ -1,5 +1,10 @@
 <?php
 
+$host ="127.0.0.1";
+$dbname="testpdo";
+$username="root";
+$password="";
+
 // In this example we are using MySQL but this applies to any database that has support for transactions
 $db = new PDO('mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8', $username, $password);    
 
@@ -16,6 +21,10 @@ try {
          VALUES (:name, :address, :telephone, :created_at)'
     );
     
+$name="Mirko";
+$address="vinkovacka 34";
+$telephone="+3851223234";
+
     $preparedStatement->execute([
         'name' => $name,
         'address' => $address,
@@ -24,14 +33,16 @@ try {
     ]);
     
     // Get the generated `order_id`
-    $orderId = $db->lastInsertId();
+    $orderId = (int)$db->lastInsertId();
 
     // Construct the query for inserting the products of the order
     $insertProductsQuery = 'INSERT INTO `orders_products` (`order_id`, `product_id`, `quantity`) VALUES';
     
+    $products=[22,56=>55];
+print_r($products);
     $count = 0;
     foreach ( $products as $productId => $quantity ) {
-        $insertProductsQuery .= ' (:order_id' . $count . ', :product_id' . $count . ', :quantity' . $count . ')';
+        $insertProductsQuery .= ' (:order_id' . $count . ', :product_id' . $count . ', :quantity' . $count . '),';
         
         $insertProductsParams['order_id' . $count] = $orderId;
         $insertProductsParams['product_id' . $count] = $productId;
@@ -40,6 +51,11 @@ try {
         ++$count;
     }
     
+echo $insertProductsQuery;
+
+// budući da u petlji na kraju ostaje TRAILLING COMMA problem, moramo maknuti zarez na kraju
+$insertProductsQuery = rtrim($insertProductsQuery, ',');
+
     // Insert the products included in the order into the database
     $preparedStatement = $db->prepare($insertProductsQuery);
     $preparedStatement->execute($insertProductsParams);
