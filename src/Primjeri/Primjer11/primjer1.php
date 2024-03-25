@@ -15,28 +15,34 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email)
-    VALUES (:firstname, :lastname, :email)");
-    $stmt->bindParam(':firstname', $firstname);
-    $stmt->bindParam(':lastname', $lastname);
-    $stmt->bindParam(':email', $email);
+    $stmt = $conn->prepare("
+    INSERT INTO MyGuests (firstname, lastname, email, broj)
+    VALUES (:firstname, :lastname, :email, :broj)
+    ");
+    $stmt->bindParam(':firstname', $firstname,PDO::PARAM_STR);
+    $stmt->bindParam(':lastname', $lastname,PDO::PARAM_STR);
+    $stmt->bindParam(':email', $email,PDO::PARAM_STR);
+    $stmt->bindParam(':broj', $broj,PDO::PARAM_INT);
 
     // insert a row
     $firstname = "John";
     $lastname = "Doe";
     $email = "john@example.com";
+    $broj=77;
     $stmt->execute();
 
     // insert another row
     $firstname = "Mary";
     $lastname = "Moe";
     $email = "mary@example.com";
+    $broj=77;
     $stmt->execute();
 
     // insert another row
     $firstname = "Julie";
     $lastname = "Dooley";
     $email = "julie@example.com";
+    $broj=77;
     $stmt->execute();
 
     echo "New records created successfully";
