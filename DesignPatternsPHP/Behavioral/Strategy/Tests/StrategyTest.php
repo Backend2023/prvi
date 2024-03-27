@@ -11,7 +11,10 @@ use PHPUnit\Framework\TestCase;
 
 class StrategyTest extends TestCase
 {
-    public function provideIntegers()
+    //Mrvic, 27.3.2024
+    //StrategyTest::provideIntegers() is not static
+    //    public function provideIntegers()
+    public static function provideIntegers()
     {
         return [
             [
@@ -24,8 +27,9 @@ class StrategyTest extends TestCase
             ],
         ];
     }
-
-    public function provideDates()
+    //StrategyTest::provideDates() is not static
+//public  function provideDates()
+    public static function provideDates()
     {
         return [
             [
@@ -40,11 +44,12 @@ class StrategyTest extends TestCase
     }
 
     /**
-     * @dataProvider provideIntegers
+     * 
      *
      * @param array $collection
      * @param array $expected
      */
+    #dataProvider provideIntegers
     public function testIdComparator($collection, $expected)
     {
         $obj = new Context(new IdComparator());
@@ -55,11 +60,12 @@ class StrategyTest extends TestCase
     }
 
     /**
-     * @dataProvider provideDates
+     * 
      *
      * @param array $collection
      * @param array $expected
      */
+    #dataProvider provideIntegers
     public function testDateComparator($collection, $expected)
     {
         $obj = new Context(new DateComparator());

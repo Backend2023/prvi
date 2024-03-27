@@ -5,16 +5,18 @@
       <directory>C:/xampp/htdocs/prva/DesignPatternsPHP/Creational/</directory>
     </testsuite>
     <testsuite name="ProjectTestSuite2">
-      <directory>C:\xampp\htdocs\prva\DesignPatternsPHP\Behavioral\Iterator\Tests\</directory>
+      <directory>C:\xampp\htdocs\prva\DesignPatternsPHP\Behavioral\</directory>
     </testsuite>
   </testsuites>
   <php>
     <env name="APP_ENV" value="testing"/>
   </php>
+  <!--
   <source>
     <include>
       <directory suffix="Test.php">C:/xampp/htdocs/prva/DesignPatternsPHP/Creational/StaticFactory/Tests/</directory>
       <directory suffix="Test.php">C:\xampp\htdocs\prva\DesignPatternsPHP\Behavioral\Iterator\Tests\</directory>
     </include>
   </source>
+    -->
 </phpunit>
