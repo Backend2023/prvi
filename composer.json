@@ -26,7 +26,8 @@
         "lfiweb/jsonstat-phpviz": "^2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.0.0",
-        "mockery/mockery": "^1.6.11"
-      }
+        "phpunit/phpunit": "^11.0",
+        "mockery/mockery":"^1.6"
+      
+    }
 }
