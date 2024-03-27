@@ -55,11 +55,14 @@ echo $insertProductsQuery;
 
 // budući da u petlji na kraju ostaje TRAILLING COMMA problem, moramo maknuti zarez na kraju
 $insertProductsQuery = rtrim($insertProductsQuery, ',');
+print_r($insertProductsParams);
 
     // Insert the products included in the order into the database
     $preparedStatement = $db->prepare($insertProductsQuery);
     $preparedStatement->execute($insertProductsParams);
     
+    echo $preparedStatement->queryString;
+
     // Make the changes to the database permanent
     $db->commit();
 }

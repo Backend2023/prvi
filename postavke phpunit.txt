@@ -1,1 +1,8 @@
-PS C:\xampp\htdocs\prva\DesignPatternsPHP\Creational\Singleton\Tests> php C:\xampp\htdocs\prva\DesignPatternsPHP\vendor\phpunit\phpunit\phpunit .
+PS C:\xampp\htdocs\prva\DesignPatternsPHP\Creational\StaticFactory> php C:\xampp\htdocs\prva\DesignPatternsPHP\vendor\phpunit\phpunit\phpunit .
+PHPUnit 9.6.17 by Sebastian Bergmann and contributors.
+
+...                                                                 3 / 3 (100%)
+
+Time: 00:00.011, Memory: 4.00 MB
+
+OK (3 tests, 3 assertions)

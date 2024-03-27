@@ -17,15 +17,14 @@ class StaticFactoryTest extends TestCase
         $this->assertInstanceOf(FormatNumber::class, StaticFactory::factory('number'));
     }
 
-    public function testCanCreateStringFormatter()
+    
+        public function testCanCreateStringFormatter()
     {
         $this->assertInstanceOf(FormatString::class, StaticFactory::factory('string'));
     }
 
-    public function testException()
+    public function testProba()
     {
-        $this->expectException(InvalidArgumentException::class);
-
-        StaticFactory::factory('object');
+        $this->assertTrue(false, $message="ovo sam namjerno srusi");
     }
 }
