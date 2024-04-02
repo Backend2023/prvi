@@ -29,8 +29,9 @@ class VisitorTest extends TestCase
     }
 
     /**
-     * @dataProvider provideRoles
+     * 
      */
+    #dataProvider provideRoles
     public function testVisitSomeRole(Role $role)
     {
         $role->accept($this->visitor);

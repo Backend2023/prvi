@@ -6,12 +6,11 @@
     </testsuite>
     <testsuite name="ProjectTestSuite1">
       <directory>C:/xampp/htdocs/prva/DesignPatternsPHP/Creational/</directory>
-    </testsuite>
-    <testsuite name="ProjectTestSuite2">
       <directory>C:\xampp\htdocs\prva\DesignPatternsPHP\Behavioral\</directory>
     </testsuite>
     <testsuite name="calc">
       <directory>C:\xampp\htdocs\prva\src\Primjeri\Primjer13\</directory>
+         <directory>C:\xampp\htdocs\prva\src\Vjezbe\Vjezba13\</directory>
     </testsuite>
   </testsuites>
   <php>

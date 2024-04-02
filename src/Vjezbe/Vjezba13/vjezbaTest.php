@@ -1,5 +1,5 @@
 <?php
-
+use \PHPUnit\Framework\TestCase;
 class Calculator
 {
     public function add($a, $b)
@@ -8,16 +8,16 @@ class Calculator
     }
 }
 
-class CalculatorTest extends PHPUnit_Framework_TestCase
+class CalculatorTest extends TestCase
 {
     private $calculator;
  
-    protected function setUp()
+    protected function setUp():void
     {
         $this->calculator = new Calculator();
     }
  
-    protected function tearDown()
+    protected function tearDown():void
     {
         $this->calculator = NULL;
     }
@@ -27,13 +27,15 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
         return array(
             array(1,2,3),
             array(0,0,0),
-            array(-1,-1,-2),
+            array(0.00001,0.00002,0.00003),
+            array(1000000000,0.00002,0),
+            array(-1000000000,0.00002,0),
+            array(-1,-1,-2)
         );
     }
  
-    /**
-     * @dataProvider addDataProvider
-     */
+
+    #dataProvider addDataProvider
     public function testAdd($a, $b, $expected)
     {
         $result = $this->calculator->add($a, $b);
