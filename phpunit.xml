@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" backupGlobals="false" colors="false" processIsolation="false" stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.0/phpunit.xsd" cacheDirectory=".phpunit.cache">
   <testsuites>
+      <testsuite name="Geometry">
+      <directory>C:\xampp\htdocs\prva\src\Tests\</directory>
+    </testsuite>
     <testsuite name="ProjectTestSuite1">
       <directory>C:/xampp/htdocs/prva/DesignPatternsPHP/Creational/</directory>
     </testsuite>
     <testsuite name="ProjectTestSuite2">
       <directory>C:\xampp\htdocs\prva\DesignPatternsPHP\Behavioral\</directory>
+    </testsuite>
+    <testsuite name="calc">
+      <directory>C:\xampp\htdocs\prva\src\Primjeri\Primjer13\</directory>
     </testsuite>
   </testsuites>
   <php>

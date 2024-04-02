@@ -1,17 +1,17 @@
 <?php
 
 require 'Calculator.php';
-
-class CalculatorTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+class CalculatorTest extends TestCase
 {
     private $calculator;
  
-    protected function setUp()
+    protected function setUp():void
     {
         $this->calculator = new Calculator();
     }
  
-    protected function tearDown()
+    protected function tearDown():void
     {
         $this->calculator = NULL;
     }

@@ -2,7 +2,6 @@
 
 include "../vendor/autoload.php";
 
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 define('PI', 3.14);
