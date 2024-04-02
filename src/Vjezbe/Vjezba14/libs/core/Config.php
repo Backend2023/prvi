@@ -12,7 +12,8 @@ class Config {
 
 	public static function setenv() {
 	//	$environment = (getenv('ENVIRONMENT')) ? getenv('ENVIRONMENT') : 'production';
-		defined('ENVIRONMENT') or define('ENVIRONMENT', $environment);
+	$environment ="development";
+	defined('ENVIRONMENT') or define('ENVIRONMENT', $environment);
 	}
 
 	public static $dbconn = '/db/connection';

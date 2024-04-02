@@ -5,10 +5,15 @@ define('DB_TYPE', 'mysql');
 switch (ENVIRONMENT) {
 
 	case 'development':
+		// define('DB_HOST',	'localhost');
+		// define('DB_NAME',	'database');
+		// define('DB_USER',	'root');
+		// define('DB_PASS',	'root');
 		define('DB_HOST',	'localhost');
-		define('DB_NAME',	'database');
+		define('DB_NAME',	'minimvc');
 		define('DB_USER',	'root');
-		define('DB_PASS',	'root');
+		define('DB_PASS',	'');
+
     break;
 
 	default:
