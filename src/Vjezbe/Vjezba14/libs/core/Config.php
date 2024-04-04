@@ -19,6 +19,9 @@ class Config {
 	public static $dbconn = '/db/connection';
 
 	public static function db() {
+		// CONF = ROOT.'/conf'
+		// Route= 'core/ROute'
+		// $fileExtention= '.php'
 		require CONF.self::$dbconn.Route::$fileExtention;
 	}
 	

@@ -1,0 +1,7 @@
+Za novu rutu potrebno je kreirati "Nova" klasu koja extenda controller
+sačuvati ju u app/controllers/Nova.php
+Ime klase treba biti "Nova"
+Action, odnosno defaultna metoda koja se pokreće je index() i za sada je jedina
+Pozivamo ju sa http://127.0.0.1:8000/?url=nova
+U controller Nova.php, action index() upisati:
+$this->view->render('layout/custom', array('content' => 'home/gem/nova'));

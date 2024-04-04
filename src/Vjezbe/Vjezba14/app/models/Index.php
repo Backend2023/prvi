@@ -8,7 +8,8 @@ class Index extends \App\Model {
 	}
 
 	public function get() {
-		return $this->database->select("SELECT * FROM someththing ORDER BY someththing . id DESC LIMIT 0, 10");
+		return $this->database->select("SELECT * FROM orders LIMIT 0, 10");
+	//	return $this->database->select("SELECT * FROM someththing ORDER BY someththing . id DESC LIMIT 0, 10");
 	}
 
 }

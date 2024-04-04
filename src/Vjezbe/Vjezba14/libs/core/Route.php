@@ -6,6 +6,7 @@ class Route {
 	public static $fileExtention 	= '.php';
 	public static $default			= 'Index';
 	public static $error			= 'Error';
+	public static $report			= 'Report';
 
 	public static $URL 				= '';
 	public static $MODEL			= '';

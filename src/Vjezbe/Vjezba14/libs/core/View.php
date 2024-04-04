@@ -10,7 +10,12 @@ class View {
 	public function render($layout, $views = null, $vars = null) {
 
 		if (isset($vars)) {
+			print_r($vars);    // proba
 			extract($vars);
+			var_dump(get_defined_vars());
+		}
+		foreach ( $vars as $key => $value) {
+	  echo $value["name"];		# code...
 		}
 
 		if (isset($views)) {
