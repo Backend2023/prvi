@@ -15,7 +15,7 @@ class View {
 			var_dump(get_defined_vars());
 		}
 		foreach ( $vars as $key => $value) {
-	  echo $value["name"];		# code...
+	  echo "<br>IMEEE:  ".$value["name"];		# code...
 		}
 
 		if (isset($views)) {

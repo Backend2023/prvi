@@ -5,6 +5,9 @@ class Report extends \App\Controller {
 	public function __construct() {
 		parent::__construct();
 	}
+	/**
+	 * http://localhost:8000/?url=report
+	 */
 	
 	public function index() {
 		$this->view->render('layout/custom', array('content' => 'home/report'),(new Index)->get());
