@@ -10,7 +10,9 @@ $router->add("/{controller}/{action}");
 
 // Examples with custom route variables
 $router->add("/{title}/{id:\d+}/{page:\d+}", ["controller" => "products", "action" => "showPage"]);
-$router->add("/product/{slug:[\w-]+}", ["controller" => "products", "action" => "show"]);
+$router->add("/product/{slug}", ["controller" => "products", "action" => "show"]);
+//$router->add("/product/{slug:[\W\w\d_-]+}", ["controller" => "products", "action" => "show"]);
+//$router->add("/product/{slug:[\w-]+}", ["controller" => "products", "action" => "show"]);
 
 // Example with namespace
 $router->add("/admin/{controller}/{action}", ["namespace" => "Admin"]);

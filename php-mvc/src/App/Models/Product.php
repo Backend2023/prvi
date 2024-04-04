@@ -10,7 +10,7 @@ use PDO;
 // Example model
 class Product extends Model
 {
-    // protected $table = "products";
+     protected $table = "products";
 
     protected function validate(array $data): void
     {
