@@ -6,7 +6,7 @@ return [
     'host' => 'localhost',
     'user' => 'root',
     'pass' => '',
-    'db' => 'algebra_auth',
+    'db' => 'sakila',
     'charset' => 'utf8'
   ],
   'sqlite' => [],

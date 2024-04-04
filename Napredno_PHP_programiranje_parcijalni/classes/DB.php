@@ -1,6 +1,6 @@
 <?php
-namespace DB;
-
+//namespace DB;
+//use Config\Config;
 class DB
 {
   private static $instance = null;
@@ -26,8 +26,8 @@ class DB
     $pass = $this->config[$driver]['pass'];
     
     try{
-      $this->conn = new PDO($dsn, $user, $pass);
-    } catch (PDOException $e){
+      $this->conn = new \PDO($dsn, $user, $pass);
+    } catch (\PDOException $e){
       die($e->getMessage());
     }
   }
